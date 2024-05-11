@@ -77,5 +77,5 @@ Also, you can check these jupyter-notebooks:
 - :octocat: [HGU-DLLAB/Korean-FastSpeech2-Pytorch Public](https://github.com/HGU-DLLAB/Korean-FastSpeech2-Pytorch)
 - :fire:[`[Pytorch-Hub]NVIDIA/HiFi-GAN`](https://pytorch.org/hub/nvidia_deeplearningexamples_hifigan/)
 - 🤗 [accelerate](https://huggingface.co/docs/accelerate/package_reference/accelerator)
-- 🤗 :octocat: [Accelerate(Github)](https://github.com/huggingface/accelerate) 
+- 🤗 :octocat: [accelerate(Github)](https://github.com/huggingface/accelerate) 
 - [`torchmalloc.py`](https://github.com/elu-lab/fastspeech2_a/blob/main/torchmalloc.py) is referred from: 🤗 :octocat: [huggingface-peft Github](https://github.com/huggingface/peft/blob/main/examples/causal_language_modeling/peft_lora_clm_accelerate_ds_zero3_offload.py)
