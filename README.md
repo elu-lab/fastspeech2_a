@@ -50,12 +50,12 @@ accelerate config
 
  With this command, you can start training. 
 ```
-accelerate launch train.py --n_epochs 800 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
+accelerate launch train.py --n_epochs 800 --save_start_step 12000 --save_epochs 20 --synthesis_logging_epochs 20 --try_name T_01_LJSpeech
 ```
 
 Also, you can train your TTS model with this command.
 ```
-CUDA_VISIBLE_DEVICES=2,3 accelerate launch train.py --n_epochs 800 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
+CUDA_VISIBLE_DEVICES=2,3 accelerate launch train.py --n_epochs 800 --save_start_step 12000 --save_epochs 20 --synthesis_logging_epochs 20 --try_name T_01_LJSpeech
 ```
 
 ## Synthesize
