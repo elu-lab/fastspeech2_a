@@ -1,7 +1,7 @@
 # fastspeech2_a
- TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. 
+ TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. And We converted sentecnes into `arpabet` `TextGrid` files by [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/) before training. We could get these files from [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) repo. (You can download from [here: Google Drive Folder Link](https://drive.google.com/drive/folders/1DBRkALpPd6FL9gjHMmMEdHODmkgNIIK4)) 
 
-Additionally, for faster or more efficient training, I added some codes from:    
+Additionally, I added some codes from:    
 - 🤗 `accelerate`: `multi-gpu` - Trained on 2 x NVIDIA GeForece RTX 4090 GPUs
 - ✍🏻️ `wandb` [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/fastpeech2_a)
   - `wandb` instead of `Tensorboard`. `wandb` is compatible with 🤗`accelerate` and with :fire:`pytorch`.
