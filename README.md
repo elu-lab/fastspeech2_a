@@ -64,7 +64,10 @@ you can synthesize speech in CLI with this command:
 python synthesize.py --raw_texts <Text to syntheize to speech> --restore_step 100000
 ```
 You can refer to `Colab notebooks (Examples)` above if you wanna synthesize.    
-Also, you can check this [jupyter-notebook](https://github.com/elu-lab/fastspeech2_a/blob/main/(EXAMPLE_CLI)%5BT_01%5D%20synthesis.ipynb). 
+Also, you can check these jupyter-notebooks:     
+- [(EXAMPLE_CLI)[T_01] synthesis.ipynb](https://github.com/elu-lab/fastspeech2_a/blob/main/(EXAMPLE_CLI)%5BT_01%5D%20synthesis.ipynb).     
+- [(EXAMPLE)[T_01] synthesis.ipynb](https://github.com/elu-lab/fastspeech2_a/blob/main/(EXAMPLE)%5BT_01%5D%20synthesis.ipynb).
+  
  <img src="/imgs/스크린샷 2024-05-11 오후 10.50.29.png" width="83%"></img>
 
 
