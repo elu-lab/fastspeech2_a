@@ -430,8 +430,8 @@ def main(args, configs):
         print()
 
     ## Sample Audio Added
-    # wandb.log({'Visualization': preview_table})
-    # accelerator.log({'Sample Speeches': preview_table})
+    wandb.log({'Visualization': preview_table})
+    accelerator.log({'Sample Speeches': preview_table})
     print(f"{b_}========================== Trainig is Over =========================={sr_}", end ="\n" )
 
     ## End of wandb Logging
