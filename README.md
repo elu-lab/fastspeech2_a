@@ -1,5 +1,5 @@
 # fastspeech2_a
- TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. And We converted sentecnes into `arpabet` `TextGrid` files by [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/) before training. We could get these files from [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) repo. (You can download from [here: Google Drive Folder Link](https://drive.google.com/drive/folders/1DBRkALpPd6FL9gjHMmMEdHODmkgNIIK4)) 
+ TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on :octocat: [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. And We converted sentecnes into `arpabet` `TextGrid` files by [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/) before training. We could get these files from [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) repo. You can download from [here: Google Drive Folder Link](https://drive.google.com/drive/folders/1DBRkALpPd6FL9gjHMmMEdHODmkgNIIK4). This is why this repo is named `fastspeech2_a`.
 
 Additionally, I added some codes from:    
 - 🤗 `accelerate`: `multi-gpu` - Trained on 2 x NVIDIA GeForece RTX 4090 GPUs
@@ -12,7 +12,7 @@ Additionally, I added some codes from:
     <img src="/imgs/스크린샷 2024-05-11 오후 10.17.47.png" width="83%"></img>
     </div>
     </details>
-- [`torchmalloc.py`](https://github.com/elu-lab/FASTSPeech2/blob/main/torchmalloc.py) and :rainbow:[`colorama`](https://github.com/tartley/colorama) can show your resource in real-time (during training)
+- [`torchmalloc.py`](https://github.com/elu-lab/fastspeech2_a/blob/main/torchmalloc.py) and :rainbow:[`colorama`](https://github.com/tartley/colorama) can show your resource in real-time (during training)
 - [`noisereduce`](https://github.com/timsainb/noisereduce) is available when you run `preprocessor.py`.
   - `Non-Stataionary Noise Reduction`
   - `prop_decrease` can avoid data-distortion. (0.0 ~ 1.0)
@@ -72,11 +72,10 @@ Also, you can check these jupyter-notebooks:
 
 
 ## References
-- [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558)
-- [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2)
-- [HGU-DLLAB/Korean-FastSpeech2-Pytorch
-Public](https://github.com/HGU-DLLAB/Korean-FastSpeech2-Pytorch)
-- [pytorch_hub/nvidia/HIFI-GAN](https://pytorch.org/hub/nvidia_deeplearningexamples_hifigan/)
-- [🤗 Accelerate](https://huggingface.co/docs/accelerate/package_reference/accelerator)
-- [🤗 Accelerate(Github)](https://github.com/huggingface/accelerate) 
-- [🤗 huggingface/peft/.../peft_lora_clm_accelerate_ds_zero3_offload.py](https://github.com/huggingface/peft/blob/main/examples/causal_language_modeling/peft_lora_clm_accelerate_ds_zero3_offload.py)
+- arXive: [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558)
+- :octocat: [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2)
+- :octocat: [HGU-DLLAB/Korean-FastSpeech2-Pytorch Public](https://github.com/HGU-DLLAB/Korean-FastSpeech2-Pytorch)
+- :fire:[`[Pytorch-Hub]NVIDIA/HiFi-GAN`](https://pytorch.org/hub/nvidia_deeplearningexamples_hifigan/)
+- 🤗 [accelerate](https://huggingface.co/docs/accelerate/package_reference/accelerator)
+- 🤗 :octocat: [Accelerate(Github)](https://github.com/huggingface/accelerate) 
+- [`torchmalloc.py`](https://github.com/elu-lab/fastspeech2_a/blob/main/torchmalloc.py) is referred from: 🤗:octocat: [huggingface-peft Github](https://github.com/huggingface/peft/blob/main/examples/causal_language_modeling/peft_lora_clm_accelerate_ds_zero3_offload.py)
