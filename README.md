@@ -1,29 +1,35 @@
 # fastspeech2_a
- TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. We use [AI-HUB: Multi-Speaker-Speech](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=542) dataset and [MLS(=Multilingual LibriSpeech)](https://www.openslr.org/94/) dataset for training. 
+ TTS(= Text-To-Speech) Model for studying and researching. This Repository is mainly based on [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) and modified or added some codes. 
 
-## Dataset
-- [LJSpeech)](https://keithito.com/LJ-Speech-Dataset/)
-  - `Language`: English :us:
-  - `sample_rate`: 22.05kHz
-
-
-
-## Features(Differences?)
-- 🤗[`accelerate`](https://github.com/huggingface/accelerate) can allow `multi-gpu` training easily: Trained on 2 x NVIDIA GeForece RTX 4090 GPUs. 
-- [`torchmalloc.py`](https://github.com/elu-lab/FASTSPeech2/blob/main/torchmalloc.py) and :rainbow:[`colorama`](https://github.com/tartley/colorama) can show your resource in real-time (during training) like below:
-  <details>
-  <summary> example </summary>
-  <div>
-   Referred: <a href="https://github.com/huggingface/peft/blob/main/examples/causal_language_modeling/peft_lora_clm_accelerate_ds_zero3_offload.py">🤗huggingface/peft/ .. example</a> <br/>   
-  <img src="/imgs/스크린샷 2023-11-20 오후 11.25.09.png" width="60%"></img>
-  </div>
-  </details>
+Additionally, for faster or more efficient training, I added some codes from:    
+- 🤗 `accelerate`: `multi-gpu` - Trained on 2 x NVIDIA GeForece RTX 4090 GPUs
+- ✍🏻️ `wandb` [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/fastpeech2_a)
+  - `wandb` instead of `Tensorboard`. `wandb` is compatible with 🤗`accelerate` and with :fire:`pytorch`.
+  - <details>
+    <summary> dashboard screenshots </summary>
+    <div>
+    <img src="/imgs/스크린샷 2024-05-11 오후 10.18.04.png" width="83%"></img>
+    <img src="/imgs/스크린샷 2024-05-11 오후 10.17.47.png" width="83%"></img>
+    </div>
+    </details>
+- [`torchmalloc.py`](https://github.com/elu-lab/FASTSPeech2/blob/main/torchmalloc.py) and :rainbow:[`colorama`](https://github.com/tartley/colorama) can show your resource in real-time (during training)
 - [`noisereduce`](https://github.com/timsainb/noisereduce) is available when you run `preprocessor.py`.
   - `Non-Stataionary Noise Reduction`
   - `prop_decrease` can avoid data-distortion. (0.0 ~ 1.0)
-- `wandb` instead of `Tensorboard`. `wandb` is compatible with 🤗`accelerate` and with :fire:`pytorch`.
+  - Actually, NOT USED.
 - :fire:[`[Pytorch-Hub]NVIDIA/HiFi-GAN`](https://pytorch.org/hub/nvidia_deeplearningexamples_hifigan/): used as a vocoder.
-  
+
+## Dataset
+- [LJSpeech](https://keithito.com/LJ-Speech-Dataset/)
+  - `Language`: English :us:
+  - `Speaker`: Single Speaker
+  - `sample_rate`: 22.05kHz
+
+## Colab notebooks (Examples):
+Theses codes are written and run in my vscode environment.
+- **(EXAMPLE_Jupyternotebook) Synthesis.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FOqWONEY26x6HWIiakvONxS_k2-zDjCR?usp=sharing)     
+- **(EXAMPLE_CLI) Synthesis.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pW6ahqktYDLivV3bsuMM7Tl1Q8vOYqBm?usp=sharing)     
+- **More_Examples_Synthesized.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1eOomvRbp5lT79e7j5xkoNpapkLSu4U_3?usp=sharing)
 
 ## Preprocess
  This `preprocess.py` can give you the pitch, energy, duration and phones from `TextGrid` files. 
@@ -44,21 +50,22 @@ accelerate config
 
  With this command, you can start training. 
 ```
-accelerate launch train.py --n_epochs 600 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
+accelerate launch train.py --n_epochs 800 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
 ```
 
 Also, you can train your TTS model with this command.
 ```
-CUDA_VISIBLE_DEVICES=2,3 accelerate launch train.py --n_epochs 600 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
+CUDA_VISIBLE_DEVICES=2,3 accelerate launch train.py --n_epochs 800 --save_epochs 50 --synthesis_logging_epochs 30 --try_name T_01_LJSpeech
 ```
 
 ## Synthesize
 you can synthesize speech in CLI with this command: 
 ```
-python synthesize.py --raw_texts <Text to syntheize to speech> --restore_step 53100
+python synthesize.py --raw_texts <Text to syntheize to speech> --restore_step 100000
 ```
-Also, you can check this [jupyter-notebook](https://github.com/elu-lab/FASTSPeech2/blob/main/synthesize_example.ipynb) when you try to synthesize.
- <img src="/imgs/스크린샷 2023-11-20 오후 9.33.27.png" width="83%"></img>
+You can refer to `Colab notebooks (Examples)` above if you wanna synthesize.    
+Also, you can check this [jupyter-notebook](https://github.com/elu-lab/fastspeech2_a/blob/main/(EXAMPLE_CLI)%5BT_01%5D%20synthesis.ipynb). 
+ <img src="/imgs/스크린샷 2024-05-11 오후 10.16.17.png" width="83%"></img>
 
 
 ## References
