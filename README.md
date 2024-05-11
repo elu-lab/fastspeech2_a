@@ -65,7 +65,7 @@ python synthesize.py --raw_texts <Text to syntheize to speech> --restore_step 10
 ```
 You can refer to `Colab notebooks (Examples)` above if you wanna synthesize.    
 Also, you can check this [jupyter-notebook](https://github.com/elu-lab/fastspeech2_a/blob/main/(EXAMPLE_CLI)%5BT_01%5D%20synthesis.ipynb). 
- <img src="/imgs/스크린샷 2024-05-11 오후 10.16.17.png" width="83%"></img>
+ <img src="/imgs/스크린샷 2024-05-11 오후 10.50.29.png" width="83%"></img>
 
 
 ## References
