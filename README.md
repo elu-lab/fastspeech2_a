@@ -72,7 +72,7 @@ Also, you can check these jupyter-notebooks:
 
 
 ## References
-- arXive: [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558)
+- arXiv: [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558)
 - :octocat: [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2)
 - :octocat: [HGU-DLLAB/Korean-FastSpeech2-Pytorch Public](https://github.com/HGU-DLLAB/Korean-FastSpeech2-Pytorch)
 - :fire:[`[Pytorch-Hub]NVIDIA/HiFi-GAN`](https://pytorch.org/hub/nvidia_deeplearningexamples_hifigan/)
