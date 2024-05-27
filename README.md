@@ -26,7 +26,7 @@ Additionally, I added some codes from:
   - `sample_rate`: 22.05kHz
 
 ## Colab notebooks (Examples):
-Theses codes are written and run in my vscode environment.
+These codes are run and the example-speeches are synthesized in my vscode environment. I moved this Jupyter Notebook file to Colab to share the synthesized example-speeches below: 
 - **(EXAMPLE_Jupyternotebook) Synthesis.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FOqWONEY26x6HWIiakvONxS_k2-zDjCR?usp=sharing)     
 - **(EXAMPLE_CLI) Synthesis.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pW6ahqktYDLivV3bsuMM7Tl1Q8vOYqBm?usp=sharing)     
 - **More_Examples_Synthesized.ipynb** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1eOomvRbp5lT79e7j5xkoNpapkLSu4U_3?usp=sharing)
